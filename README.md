@@ -9,14 +9,15 @@ Running SVfinder
 ###STEP3: identifiying intra-chromosomal translocation
 	python sv_within_chr.py longisize.txt output.txt read_len(optional, default 100) search_len(optional, default 1000) cluster_cutoff(optional, default 1)
 
-Annotation Script
-=================
-To use addcatann, you need to specify
+Getting Annotation
+==================
+To use addcatann.pl, you need to specify
  
 Please provide the following:
-	(1) species (human or mouse),
+
+	(1) species (human or mouse),	
 	(2) upstream and downstream distal distance limit (in kb),
-	(3) upstream proxi distance limit (in kb),
+	(3) upstream proxi distance limit (in kb),	
 	(4) downstream proxi distance limit (in kb),
 	(5) peak file name,
 	(6) column that contains peak summit (5 for hpeak output, 0 if no summit provided),
@@ -25,7 +26,7 @@ Please provide the following:
 	 
 The syntax is
 	 
-	perl /home/prj/compbio/software/utl/addcatann.pl human 10 2 2 [input file in “chr start end” format] 0 /home/prj/compbio/data/annotations/hg19/hg19.refseq.unique.annot [output file name]
+	perl addcatann.pl human 10 2 2 [input file in “chr start end” format] 0 /home/prj/compbio/data/annotations/hg19/hg19.refseq.unique.annot [output file name]
 	 
 An example (in hg18) is
 	 
