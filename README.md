@@ -26,8 +26,14 @@ Please provide the following:
 	 
 The syntax is
 	 
-	perl addcatann.pl human 10 2 2 [input file in “chr start end” format] 0 /home/prj/compbio/data/annotations/hg19/hg19.refseq.unique.annot [output file name]
+	perl addcatann.pl human 10 2 2 [input file in “chr start end” format] 0 gene_annotation_file [output file name]
 	 
-An example (in hg18) is
+An example (in hg19) is
 	 
-	perl addcatann.pl human 100 2 2 mof3.cd4.out.hpeak.out 5 /home/prj/compbio/data/annotations/hg18/hg18.refseq.unique.annot mof3.cd4.annot
+	perl addcatann.pl human 100 2 2 mof3.cd4.out.hpeak.out 5 hg19.ucsc.gene.txt output_file
+
+Gene annotaion file format (seven columns):
+
+	chr_num  strand  txSTART  txEND  cdsSTART  cdsEND  geneName
+	
+*chr_num column should only contain the number, no 'chr' label. Use 23 instead of X and 24 for Y.*
