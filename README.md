@@ -36,4 +36,4 @@ Gene annotaion file format (seven columns):
 
 	chr_num  strand  txSTART  txEND  cdsSTART  cdsEND  geneName
 	
-*chr_num column should only contain the number, no 'chr' label. Use 23 instead of X and 24 for Y.*
+*chr_num column should only contain the number, no 'chr' label. Use 23 instead of X and 24 for Y. Chrom should noly be in 1-24*
