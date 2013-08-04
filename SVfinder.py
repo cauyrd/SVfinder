@@ -4,7 +4,7 @@ Author: Rendong Yang
 Email: cauyrd@gmail.com
 Description: detect Structural Variations supported by discordant read pairs
 History: 1.Thu Feb 23 15:57:35 EST 2012
-		 2.Wed Jul 31 16:56:57 EDT 2013
+	 2.Wed Jul 31 16:56:57 EDT 2013
 '''
 import os,sys
 import re,getopt
