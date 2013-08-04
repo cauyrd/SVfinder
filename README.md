@@ -3,11 +3,14 @@ Running SVfinder
 ###STEP1: Classifying mapped paired reads/tags
     python classify_reads.py paired_samfile target_samfile max_inster_size
 
-###STEP2: identifying inter-chromosomal translocation
-	python sv_for_diff_chr.py diffchr_pairs.txt output.txt read_len(optional, default 100) search_len(optional, default 1000) cluster_cutoff(optional, default 1)
-
-###STEP3: identifiying intra-chromosomal translocation
-	python sv_within_chr.py longisize.txt output.txt read_len(optional, default 100) search_len(optional, default 1000) cluster_cutoff(optional, default 1)
+###STEP2: identifying inter/intra-chromosomal genomic rearrangement
+	python SVfinder.py -i <discordant_reads.sam> -o <output.txt> [opts] 
+#### Options:
+	-n <int>    :cutoff of number of discordant pais to define a cluster  (default:2)'
+	-l <int>    :extention length to join overlaped reads together (default:1000)'
+	-r <int>    :read length (default:100)'
+	-g <int>    :gene annotation file (default:hg19.ucsc.gene.txt)'
+	-h          :produce this menu'
 
 Getting Annotation
 ==================
@@ -36,4 +39,4 @@ Gene annotaion file format (seven columns):
 
 	chr_num  strand  txSTART  txEND  cdsSTART  cdsEND  geneName
 	
-*chr_num column should only contain the number, no 'chr' label. Use 23 instead of X and 24 for Y. Chrom should noly be in 1-24*
+*chr_num column should only contain the number, no 'chr' label. Use 23 instead of X and 24 for Y. Chrom should noly be in 1-24.*
