@@ -1,9 +1,13 @@
 Running SVfinder
 ================
-###STEP1: Classifying mapped paired reads/tags
+###STEP 0: Install Python Packages
+    Scipy (http://scipy.org/)
+    Numpy (http://www.numpy.org/)
+    HTSeq (http://www-huber.embl.de/users/anders/HTSeq)
+###STEP 1: Classifying mapped paired reads/tags
     python classify_reads.py paired_samfile target_samfile max_inster_size
 
-###STEP2: identifying inter/intra-chromosomal genomic rearrangement
+###STEP 2: identifying inter/intra-chromosomal genomic rearrangement
 	python SVfinder.py -i <discordant_reads.sam> -o <output.txt> [opts] 
 #### Options:
 	-n <int>    :cutoff of number of discordant pais to define a cluster  (default:2)'
