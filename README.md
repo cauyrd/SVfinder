@@ -25,23 +25,23 @@ Output
 The output files include a output summary file and a output BED file. the discordant reads are listed in the folder with suffix '_svreads'.
 
 A. The summary file consists of follwoing columns:
-#### SV type
-#### # of discordant read pairs
-#### Chromosome 1
-#### Position 1 start
-#### Position 1 end
-#### Orientation 1
-#### Chromosome 2
-#### Position 2 start
-#### Position 2 end
-#### Orientation 2 
-#### Annotation 1
-#### Annotation 2
-#### Putative gene fusion
+   1. SV type (SVfinder support Insertion, Deletion, Inversion, Intra- and Inter-chromosome translocation)
+   2. # of discordant read pairs
+   3. Chromosome 1
+   4. Position 1 start
+   5. Position 1 end
+   6. Orientation 1
+   7. Chromosome 2
+   8. Position 2 start
+   9. Position 2 end
+   10. Orientation 2 
+   11. Annotation 1
+   12. Annotation 2
+   13. Putative gene fusion
 
 B. The BED file consists of follwoing columns:
-#### Chromesome
-#### Position start
-#### Position end
-#### partener chr+start+end+strand
-#### Orientation
+   1. Chromesome
+   2. Position start
+   3. Position end
+   4. partener chr+start+end+strand
+   5. Orientation
